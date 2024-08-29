@@ -1,0 +1,115 @@
+import React, { useMemo, useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import RadioGroup from 'react-native-radio-buttons-group';
+import { useNavigation } from '@react-navigation/native';
+import styles from './style';
+
+// Đoạn mã này chỉ định kiểu chữ và màu sắc chung cho tất cả các TextInput
+const inputStyle = { 
+  height: 50, 
+  borderColor: '#ddd', 
+  borderWidth: 1, 
+  borderRadius: 5, 
+  paddingHorizontal: 15, 
+  marginBottom: 15, 
+  fontSize: 16
+};
+
+// Kiểu của các nút radio
+const radioButtonStyles = { 
+  flexDirection: 'row', 
+  alignItems: 'center', 
+  marginVertical: 10 
+};
+
+// Kiểu của các nhãn radio
+const radioLabelStyle = { 
+  fontSize: 16, 
+  color: 'black', 
+  marginLeft: 10, 
+  fontWeight: 'bold' 
+};
+
+// Đoạn mã chính của trang
+function SignUpSrceen() {
+  const [selectedId, setSelectedId] = useState(null);
+  const navigation = useNavigation();
+
+  const radioButtons = useMemo(() => ([
+    { id: '1', label: 'Male', value: 'option1', labelStyle: radioLabelStyle },
+    { id: '2', label: 'Female', value: 'option2', labelStyle: radioLabelStyle }
+  ]), []);
+
+  const handleButtonLogin = () => {
+    navigation.navigate('LoginSrceens');
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>REGISTER</Text>
+
+      <View style={styles.formContainer}>
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Name</Text>
+          <TextInput
+            style={inputStyle}
+            placeholder="Enter your name"
+            placeholderTextColor="black"
+          />
+        </View>
+        
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Phone</Text>
+          <TextInput
+            style={inputStyle}
+            placeholder="Enter your phone number"
+            placeholderTextColor="black"
+            keyboardType="phone-pad"
+          />
+        </View>
+
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Password</Text>
+          <TextInput
+            style={inputStyle}
+            placeholder="Enter your password"
+            placeholderTextColor="black"
+            secureTextEntry
+          />
+        </View>
+        
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Birthday</Text>
+          <TextInput
+            style={inputStyle}
+            placeholder="Enter your birthday"
+            placeholderTextColor="black"
+          />
+        </View>
+
+        <View style={styles.inputGroup}>
+          <Text style={styles.label}>Gender</Text>
+          <RadioGroup
+            radioButtons={radioButtons}
+            onPress={setSelectedId}
+            selectedId={selectedId}
+            layout='row'
+            containerStyle={radioButtonStyles}
+          />
+        </View>
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>REGISTER</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={handleButtonLogin}>
+          <Text style={styles.buttonTextLogin}>SIGN IN</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.footerText}>When you agree to terms and conditions</Text>
+      </View>
+    </View>
+  );
+}
+
+export default SignUpSrceen;
