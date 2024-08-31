@@ -4,37 +4,12 @@ import { View, TouchableOpacity, Alert, Text, Image } from 'react-native';
 import styles from './style';
 import { useNavigation } from '@react-navigation/native'; // Nhập useNavigation
 
-// const imageSource = require('../../assets/img/R.png');
-
-
-
-
-const UploadSrceens = () => {
-
-
-
+const UploadScreen = () => {
   return (
-    <View style={styles.container}>
-      
-
-
-     
-
-
-
-      
+    <View style={styles.container}> 
       <Text  style={styles.textstylesmall} >Welcome HomeSrceens </Text>
-      
-      
-      </View>
-
-
-
-
-      
+    </View>
   );
 };
 
-
-
-export default UploadSrceens;
+export default UploadScreen;

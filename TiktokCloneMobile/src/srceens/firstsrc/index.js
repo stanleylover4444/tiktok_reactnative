@@ -1,44 +1,33 @@
-// UI/index.js
 import React from 'react';
-import { View, TouchableOpacity, Alert, Text, Image } from 'react-native';
+import { View, TouchableOpacity, Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import styles from './style';
-import { useNavigation } from '@react-navigation/native'; // Nhập useNavigation
 
-// const imageSource = require('../../assets/img/R.png');
+const Logo = { uri: "https://logolook.net/wp-content/uploads/2021/06/Tiktok-Logo-2017-2048x1152.png" };
 
-const Logo= { uri: "https://logolook.net/wp-content/uploads/2021/06/Tiktok-Logo-2017-2048x1152.png" };
-
-
-const MainSrceens = () => {
-
-
+const MainScreen = () => {
   const navigation = useNavigation();
+
   const handleButtonLoginPress = () => {
-    navigation.navigate('LoginSrceens');
+    navigation.navigate('LoginScreen');
   };
 
   const handleButtonSignUpPress = () => {
-    navigation.navigate('SignUpSrceen');
+    navigation.navigate('SignUpScreen');
   };
 
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.imageOne} />
 
-
-     
-
-
-
-      <View style={styles.padingText}>
-      <Text  style={styles.textstylesmall} >Welcome to the globally popular</Text>
-      <Text  style={styles.textstylesmall} > short video platform, TikTok</Text>
-     
-      
+      <View style={styles.paddingText}>
+        <Text style={styles.textStyleSmall}>
+          Welcome to the globally popular
+        </Text>
+        <Text style={styles.textStyleSmall}>
+          short video platform, TikTok
+        </Text>
       </View>
-
-
-
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity
@@ -58,6 +47,4 @@ const MainSrceens = () => {
   );
 };
 
-
-
-export default MainSrceens;
+export default MainScreen;

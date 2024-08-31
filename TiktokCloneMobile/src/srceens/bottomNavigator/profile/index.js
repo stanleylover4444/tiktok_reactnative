@@ -1,40 +1,19 @@
-// UI/index.js
 import React from 'react';
-import { View, TouchableOpacity, Alert, Text, Image } from 'react-native';
-import styles from './style';
-import { useNavigation } from '@react-navigation/native'; // Nhập useNavigation
+import { View, Text, StyleSheet } from 'react-native';
+import ProfileTabs from '../../../components/CustomTab/ProfileTabs';
 
-// const imageSource = require('../../assets/img/R.png');
-
-
-
-
-const ProfileSrceens = () => {
-
-
-
+const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      
-
-
-     
-
-
-
-      
-      <Text  style={styles.textstylesmall} >Welcome HomeSrceens </Text>
-      
-      
-      </View>
-
-
-
-
-      
+      <ProfileTabs />
+    </View>
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
-
-export default ProfileSrceens;
+export default ProfileScreen;

@@ -10,39 +10,32 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 40,
     fontWeight: 'bold',
-   
-    color:"#FE2C55"
+    color: "#FE2C55"
   },
   inputContainerItemALll: {
     flex: 1,
-    paddingTop : 50
+    paddingTop: 50
   },
   inputContainer: {
     marginBottom: 30,
   },
   inputLabel: {
     fontSize: 20,
-    
     marginBottom: 5,
-    fontWeight : "bold"
+    fontWeight: "bold"
   },
   input: {
-  
-
-
-     height: 40,
+    height: 40,
     borderColor: 'gray',
     borderBottomWidth: 1,
     paddingHorizontal: 10,
-    paddingRight: 40, // Add space for the button
-  },toggleButton: {
+    paddingRight: 40, 
+  }, toggleButton: {
     position: 'absolute',
     right: 10,
     top: 10,
-    
   },
   toggleButtonText: {
-   
   },
   buttonContainer: {
     marginTop: 20,
@@ -64,8 +57,8 @@ const styles = StyleSheet.create({
   },
   textend: {
     color: 'gray',
-    fontWeight : "bold",
-    fontSize : 16,
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });
 

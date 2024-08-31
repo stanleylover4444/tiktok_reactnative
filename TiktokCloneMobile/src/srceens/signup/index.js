@@ -1,47 +1,45 @@
 import React, { useMemo, useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import RadioGroup from 'react-native-radio-buttons-group';
 import { useNavigation } from '@react-navigation/native';
 import styles from './style';
 
-// Đoạn mã này chỉ định kiểu chữ và màu sắc chung cho tất cả các TextInput
-const inputStyle = { 
-  height: 50, 
-  borderColor: '#ddd', 
-  borderWidth: 1, 
-  borderRadius: 5, 
-  paddingHorizontal: 15, 
-  marginBottom: 15, 
-  fontSize: 16
+// Định nghĩa kiểu style cho các thành phần
+const inputStyle = {
+  height: 50,
+  borderColor: '#ddd',
+  borderWidth: 1,
+  borderRadius: 5,
+  paddingHorizontal: 15,
+  marginBottom: 15,
+  fontSize: 16,
 };
 
-// Kiểu của các nút radio
-const radioButtonStyles = { 
-  flexDirection: 'row', 
-  alignItems: 'center', 
-  marginVertical: 10 
+const radioButtonStyles = {
+  flexDirection: 'row',
+  alignItems: 'center',
+  marginVertical: 10,
 };
 
-// Kiểu của các nhãn radio
-const radioLabelStyle = { 
-  fontSize: 16, 
-  color: 'black', 
-  marginLeft: 10, 
-  fontWeight: 'bold' 
+const radioLabelStyle = {
+  fontSize: 16,
+  color: 'black',
+  marginLeft: 10,
+  fontWeight: 'bold',
 };
 
-// Đoạn mã chính của trang
-function SignUpSrceen() {
+function SignUpScreen() {
   const [selectedId, setSelectedId] = useState(null);
   const navigation = useNavigation();
 
-  const radioButtons = useMemo(() => ([
+  // Sử dụng useMemo để tối ưu hóa radioButtons
+  const radioButtons = useMemo(() => [
     { id: '1', label: 'Male', value: 'option1', labelStyle: radioLabelStyle },
-    { id: '2', label: 'Female', value: 'option2', labelStyle: radioLabelStyle }
-  ]), []);
+    { id: '2', label: 'Female', value: 'option2', labelStyle: radioLabelStyle },
+  ], []);
 
   const handleButtonLogin = () => {
-    navigation.navigate('LoginSrceens');
+    navigation.navigate('LoginScreen');
   };
 
   return (
@@ -49,6 +47,7 @@ function SignUpSrceen() {
       <Text style={styles.title}>REGISTER</Text>
 
       <View style={styles.formContainer}>
+        {/* Nhóm các trường nhập liệu */}
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Name</Text>
           <TextInput
@@ -57,7 +56,7 @@ function SignUpSrceen() {
             placeholderTextColor="black"
           />
         </View>
-        
+
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Phone</Text>
           <TextInput
@@ -77,7 +76,7 @@ function SignUpSrceen() {
             secureTextEntry
           />
         </View>
-        
+
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Birthday</Text>
           <TextInput
@@ -112,4 +111,4 @@ function SignUpSrceen() {
   );
 }
 
-export default SignUpSrceen;
+export default SignUpScreen;

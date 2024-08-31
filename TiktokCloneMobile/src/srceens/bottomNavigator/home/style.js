@@ -1,16 +1,16 @@
-// UI/style.js
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-   
-    
-
+  videoContainer: {
+    width: width,
+    height: height * 0.915,
   },
-
-  
+  video: {
+    width: '100%', 
+    height: '100%', 
+  },
 });
 
 export default styles;

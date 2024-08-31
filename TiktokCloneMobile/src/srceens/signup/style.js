@@ -1,7 +1,6 @@
 
 import { StyleSheet } from 'react-native';
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -13,13 +12,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color : "#FE2C55"
+    color: "#FE2C55"
   },
   formContainer: {
     flex: 1,
     justifyContent: 'center'
   },
-  
   label: {
     fontSize: 16,
     color: 'black',
@@ -27,7 +25,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   button: {
-    backgroundColor: '#E53935',
+    backgroundColor: '#FE2C55',
     padding: 15,
     borderRadius: 5,
     alignItems: 'center',
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   buttonTextLogin: {
-    color: '#E53935',
+    color: '#FE2C55',
     fontSize: 16,
     textAlign: 'center',
     marginTop: 15
@@ -50,13 +48,5 @@ const styles = StyleSheet.create({
     color: '#666'
   }
 });
-
-
-
-
-
-
-  
-
 
 export default styles;

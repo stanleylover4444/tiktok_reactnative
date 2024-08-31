@@ -6,8 +6,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     paddingTop:100,
-    
-
   },
 
   padingText:{
@@ -15,46 +13,42 @@ const styles = StyleSheet.create({
     paddingTop: 50,
   },
   imageOne: {
-    width: 200, // Đặt chiều rộng của hình ảnh
-    height: 200, // Đặt chiều cao của hình ảnh
-    
+    width: 200, 
+    height: 200, 
   },
   textstyle: {
     fontWeight: 'bold',
-    fontSize: 30, // Đặt kích thước chữ
-    color: 'black', // Đặt màu chữ
+    fontSize: 30, 
+    color: 'black', 
   },
 
-  textstylesmall: {
+  textStyleSmall: {
     fontWeight: 'bold',
-    fontSize: 20, // Đặt kích thước chữ
-    color: 'black', // Đặt màu chữ
+    fontSize: 20, 
+    color: 'black', 
   },
- 
- 
+
   buttonContainer: {
     paddingTop:100,
     width: '60%',
     flexDirection: 'row',
     justifyContent : 'center',
-   
+  
   },
   button: {
     marginHorizontal:20,
-    width: 140, // Set the desired width
-    height: 50, // Set the desired height
-    alignItems: 'center', // Center the text horizontally
-    justifyContent: 'center', // Center the text vertically
-    borderRadius: 20, // Adjust radius for rounded corners
-    
+    width: 140, 
+    height: 50, 
+    alignItems: 'center', 
+    justifyContent: 'center', 
+    borderRadius: 20,
+  
   },
   buttonText: {
     fontWeight: 'bold',
     color: 'black',
     fontSize: 20,
-    
-    
-   
+  
   },
 });
 

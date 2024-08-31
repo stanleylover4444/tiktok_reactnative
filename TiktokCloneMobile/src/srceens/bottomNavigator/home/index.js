@@ -1,40 +1,40 @@
-// UI/index.js
-import React from 'react';
-import { View, TouchableOpacity, Alert, Text, Image } from 'react-native';
-import styles from './style';
-import { useNavigation } from '@react-navigation/native'; // Nhập useNavigation
+import React, { useRef } from 'react';
+import { View, FlatList } from 'react-native';
+import Video from 'react-native-video';
+import styles from './style'; // Đảm bảo đường dẫn là chính xác
 
-// const imageSource = require('../../assets/img/R.png');
+const videos = [
+  { id: '1', uri: require('../../../assets/video/2.mp4') },
+  { id: '2', uri: require('../../../assets/video/1.mp4') },
+  { id: '3', uri: require('../../../assets/video/1.mp4') }
+];
 
-
-
-
-const HomeSrceens = () => {
-
-
+const HomeScreen = () => {
+  
+  const videoRefs = useRef({});
+  const renderItem = ({ item }) => (
+    <View style={styles.videoContainer}>
+      <Video
+        ref={ref => videoRefs.current[item.id] = ref}
+        source={item.uri}
+        style={styles.video}
+        resizeMode="cover"
+        controls={false}
+        repeat
+  
+      />
+    </View>
+  );
 
   return (
-    <View style={styles.container}>
-      
-
-
-     
-
-
-
-      
-      <Text  style={styles.textstylesmall} >Welcome HomeSrceens </Text>
-      
-      
-      </View>
-
-
-
-
-      
+    <FlatList
+      data={videos}
+      renderItem={renderItem}
+      keyExtractor={item => item.id}
+      pagingEnabled
+      showsVerticalScrollIndicator={false}
+    />
   );
 };
 
-
-
-export default HomeSrceens;
+export default HomeScreen;
