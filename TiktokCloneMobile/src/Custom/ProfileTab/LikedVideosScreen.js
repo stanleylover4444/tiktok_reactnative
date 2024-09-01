@@ -6,7 +6,6 @@ const LikedVideosScreen = () => (
     <Text>Liked Videos</Text>
   </View>
 );
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -14,5 +13,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
 export default LikedVideosScreen;

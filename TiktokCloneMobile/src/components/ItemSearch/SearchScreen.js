@@ -20,6 +20,4 @@ const SearchScreenHeader = () => {
   );
 };
 
-
-
 export default SearchScreenHeader;

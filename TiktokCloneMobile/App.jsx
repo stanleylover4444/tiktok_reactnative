@@ -5,15 +5,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Import screens
-
 import MainScreen from './src/srceens/firstsrc';
 import LoginScreen from './src/srceens/login';
 import SignUpScreen from './src/srceens/signup';
 import HomeScreen from './src/srceens/bottomNavigator/home';
-import ChatScreen from './src/srceens/bottomNavigator/chat';
+import ChatScreen from './src/srceens/bottomNavigator/chat/chatSrceen';
 import SearchScreen from './src/srceens/bottomNavigator/search';
 import UploadScreen from './src/srceens/bottomNavigator/uploadvideo'; 
-import ProfileScreen from './src/srceens/bottomNavigator/profile';
+
+// Import the profile stack navigator
+import ProfileStackNavigator from './src/stacks/ProfileStack/ProfileStackNavigator';
 
 // Import icons
 import HomeIcon from './src/assets/icons/ic_home';
@@ -23,7 +24,10 @@ import UploadIcon from './src/assets/icons/ic_upload';
 import ProfileIcon from './src/assets/icons/ic_account';
 
 // Import header component
-import SearchScreenHeader from './src/components/IteamSearch/SearchScreen';
+import SearchScreenHeader from './src/components/HeaderSearchStack/SearchScreen';
+
+// Import colors
+import colors  from './src/theme/colors';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -85,18 +89,15 @@ const BottomTabNavigator = () => (
       options={{
         headerStyle: { backgroundColor: 'black' },
         headerTitleStyle: { fontSize: 14, fontWeight: 'bold' },
-        headerTintColor: 'white',
+        headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
       }} 
     />
     <Tab.Screen 
       name="Hồ sơ" 
-      component={ProfileScreen} 
+      component={ProfileStackNavigator} // Use the profile stack navigator here
       options={{
-        headerStyle: { backgroundColor: 'black' },
-        headerTitleStyle: { fontSize: 14, fontWeight: 'bold' },
-        headerTintColor: 'white',
-        headerTitleAlign: 'center',
+        headerShown: false,
       }} 
     />
   </Tab.Navigator>

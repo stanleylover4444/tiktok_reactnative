@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         paddingVertical: 0,
         fontSize: 16,
         color: 'white',
-
     },
     icon: {
         width: 20,
