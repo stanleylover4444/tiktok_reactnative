@@ -24,7 +24,7 @@ import UploadIcon from './src/assets/icons/ic_upload';
 import ProfileIcon from './src/assets/icons/ic_account';
 
 // Import header component
-import SearchScreenHeader from './src/components/HeaderSearchStack/SearchScreen';
+import SearchScreenHeader from './src/components/ItemSearch/SearchScreen';
 
 // Import colors
 import colors  from './src/theme/colors';
@@ -88,16 +88,19 @@ const BottomTabNavigator = () => (
       component={ChatScreen} 
       options={{
         headerStyle: { backgroundColor: 'black' },
-        headerTitleStyle: { fontSize: 14, fontWeight: 'bold' },
+        headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
       }} 
     />
     <Tab.Screen 
-      name="Hồ sơ" 
+      name="Hồ sơ"
       component={ProfileStackNavigator} // Use the profile stack navigator here
       options={{
-        headerShown: false,
+        headerStyle: { backgroundColor: 'black' },
+        headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
+        headerTintColor: colors.textColors,
+        headerTitleAlign: 'center',
       }} 
     />
   </Tab.Navigator>

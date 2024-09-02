@@ -7,12 +7,10 @@ import { useNavigation } from '@react-navigation/native'; // Nhập useNavigatio
 const notificationSrceen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textstylesmall} >Welcome HomeSrceens </Text>
+      <Text style={styles.textstylesmall} >Welcome notificationSrceen </Text>
     </View>
 
   );
 };
-
-
 
 export default notificationSrceen;

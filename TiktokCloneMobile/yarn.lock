@@ -2291,6 +2291,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-community/slider@npm:^4.5.2":
+  version: 4.5.2
+  resolution: "@react-native-community/slider@npm:4.5.2"
+  checksum: 99023660756a1a876fc3d9c1a7cec13f7e414abee3452e1e03d2794bc7f46a9d689740bed5c3889914adf6ed85a55c6017e2f0d73b5de353025ba52bba6e79e1
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.75.2":
   version: 0.75.2
   resolution: "@react-native/assets-registry@npm:0.75.2"
@@ -3046,6 +3053,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
+    "@react-native-community/slider": ^4.5.2
     "@react-native/babel-preset": 0.75.2
     "@react-native/eslint-config": 0.75.2
     "@react-native/metro-config": 0.75.2
@@ -3070,6 +3078,7 @@ __metadata:
     react-native-svg: ^15.6.0
     react-native-tab-view: ^3.5.2
     react-native-video: ^6.4.5
+    react-native-vision-camera: latest
     react-test-renderer: 18.3.1
     typescript: 5.0.4
   languageName: unknown
@@ -8262,6 +8271,26 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 705e183b09b5b07d70f9edd22a4f926aab7f3d4d1227b54959c168512ba3b0da9b3ce55e11bae78cb41a297439cdc8ebf624d2c5d6236391fe6c23708cc8045e
+  languageName: node
+  linkType: hard
+
+"react-native-vision-camera@npm:latest":
+  version: 4.5.2
+  resolution: "react-native-vision-camera@npm:4.5.2"
+  peerDependencies:
+    "@shopify/react-native-skia": "*"
+    react: "*"
+    react-native: "*"
+    react-native-reanimated: "*"
+    react-native-worklets-core: "*"
+  peerDependenciesMeta:
+    "@shopify/react-native-skia":
+      optional: true
+    react-native-reanimated:
+      optional: true
+    react-native-worklets-core:
+      optional: true
+  checksum: 19ee9f5a4105c47b6abfd8e4cf7558634e60f7d68ce6d9cc4a2c5b2b359d921c1121978637a2a4d571a75204a39141159438aac84f679c5ab33469052da8b671
   languageName: node
   linkType: hard
 

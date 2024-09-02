@@ -2,9 +2,9 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./style";
-import colors from "../../theme/colors";
+import colors from "../../../theme/colors";
 
-const UserChat = ({ nameuser, lastmessage, avtuser }) => {
+const UserChatVertical = ({ nameuser, lastmessage, avtuser }) => {
   return (
     <View style={styles.container}>
 
@@ -21,4 +21,4 @@ const UserChat = ({ nameuser, lastmessage, avtuser }) => {
   );
 };
 
-export default UserChat;
+export default UserChatVertical;

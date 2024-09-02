@@ -15,13 +15,15 @@ const ProfileStackNavigator = () => {
   return (
     <ProfileStack.Navigator>
       <ProfileStack.Screen 
-        name="Hồ sơ" 
+        name="Profile1" 
         component={ProfileScreen} 
         options={{ 
+          headerTitle: 'Hồ sơ',
           headerStyle: { backgroundColor: 'black' },
           headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
           headerTintColor: colors.textColors,
           headerTitleAlign: 'center',
+          headerShown: false
         }} 
       />
       <ProfileStack.Screen 
