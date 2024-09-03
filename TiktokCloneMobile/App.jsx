@@ -101,6 +101,7 @@ const BottomTabNavigator = () => (
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
+        headerShown: false
       }} 
     />
   </Tab.Navigator>

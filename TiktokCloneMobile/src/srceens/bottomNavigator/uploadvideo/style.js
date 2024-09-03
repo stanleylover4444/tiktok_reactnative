@@ -4,7 +4,20 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start', // Đặt các nút ở dưới cùng
+      
+  
+  },
+  containerbutton: {
+    
+    marginStart  : 350,
+    paddingTop : 30,
+ 
+  },
+
+  containerend: {
+    flex:1,
+    justifyContent : "flex-end"
+ 
   },
   button: {
     backgroundColor: 'white',
