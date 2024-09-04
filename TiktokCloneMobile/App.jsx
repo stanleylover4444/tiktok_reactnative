@@ -15,6 +15,7 @@ import UploadScreen from './src/srceens/bottomNavigator/uploadvideo';
 
 // Import the profile stack navigator
 import ProfileStackNavigator from './src/stacks/ProfileStack/ProfileStackNavigator';
+import ChatStackNavigator from './src/stacks/ChatStack/ChatStackNavigator';
 
 // Import icons
 import HomeIcon from './src/assets/icons/ic_home';
@@ -85,7 +86,7 @@ const BottomTabNavigator = () => (
     <Tab.Screen name="Đăng" component={UploadScreen} options={{ headerShown: false }} />
     <Tab.Screen 
       name="Hộp thư" 
-      component={ChatScreen} 
+      component={ChatStackNavigator} 
       options={{
         headerStyle: { backgroundColor: 'black' },
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
