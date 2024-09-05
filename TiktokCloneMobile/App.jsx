@@ -13,6 +13,8 @@ import ChatScreen from './src/srceens/bottomNavigator/chat/chatSrceen';
 import SearchScreen from './src/srceens/bottomNavigator/search';
 import UploadScreen from './src/srceens/bottomNavigator/uploadvideo'; 
 
+import MsgScreen from './src/srceens/bottomNavigator/chat/msgSrceen';
+
 // Import the profile stack navigator
 import ProfileStackNavigator from './src/stacks/ProfileStack/ProfileStackNavigator';
 import ChatStackNavigator from './src/stacks/ChatStack/ChatStackNavigator';
@@ -38,7 +40,6 @@ const BottomTabNavigator = () => (
     screenOptions={({ route }) => ({
       tabBarIcon: ({ color, size }) => {
         let IconComponent;
-
         switch (route.name) {
           case 'Trang chủ':
             IconComponent = <HomeIcon width={size} height={size} fill={color} />;
@@ -92,6 +93,8 @@ const BottomTabNavigator = () => (
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
+        headerShown: false
+        
       }} 
     />
     <Tab.Screen 
@@ -114,6 +117,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="MainScreen" component={MainScreen} options={{ headerShown: false }} />
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Message" component={MsgScreen} options={{ headerShown: false }} />
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{ headerShown: false }} />
         <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ headerShown: false }} />
       </Stack.Navigator>

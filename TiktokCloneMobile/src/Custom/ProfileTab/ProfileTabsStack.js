@@ -8,6 +8,7 @@ import SvgHiddenIcon from '../../assets/icons/ic_prive';
 import PostedVideosScreen from './PostedVideosScreen';
 import SavedVideosScreen from './SavedVideosScreen';
 import LikedVideosScreen from './LikedVideosScreen';
+import PriveVideosScreen from './PriveVideosScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -53,7 +54,7 @@ const ProfileTabs = () => (
     />
     <Tab.Screen
       name="Hidden"
-      component={LikedVideosScreen}
+      component={PriveVideosScreen}
     />
     <Tab.Screen
       name="Saved"

@@ -1,3 +1,5 @@
+// src/stacks/ChatStack/ChatStackNavigator.js
+
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -23,7 +25,6 @@ const ChatStackNavigator = () => {
           headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
           headerTintColor: colors.textColors,
           headerTitleAlign: 'center',
-          // headerShown: false
           headerLeft: () => null, 
         }} 
       />
@@ -38,22 +39,19 @@ const ChatStackNavigator = () => {
           headerTitleAlign: 'center',
         }} 
       />
-
-      <ChatStack.Screen 
-        name="Msg" 
+      {/* <ChatStack.Screen 
+        name="Message" 
         component={MsgSrceen} 
         options={{ 
+          headerShown: false,
           headerTitle: 'Lời nhắn',
           headerStyle: { backgroundColor: 'black' },
           headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
           headerTintColor: "white",
           headerTitleAlign: 'center',
         }} 
-      />
+      /> */}
     </ChatStack.Navigator>
-    
-
-    
   );
 };
 

@@ -3,11 +3,24 @@ import { View, Text, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./style";
 import colors from "../../../theme/colors";
+import { useNavigation } from "@react-navigation/native";
 
-const UserChatHozizontal = ({ nameuser, avtuser }) => {
+
+
+
+const UserChatHozizontal = ({ nameuser, avtuser , onPress  }) => {
+
+  const navigation = useNavigation();
+
+  const OpenMessageScreen = () => {
+    navigation.navigate('Message');
+  };
+
+
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity   onPress={onPress}>
         <View style={{  alignItems: "center", margin: 3 }}>
           <View><Image style={styles.avataUser} source={{ uri: avtuser }} /></View>
           <View style={{ marginStart: 10 }}>
