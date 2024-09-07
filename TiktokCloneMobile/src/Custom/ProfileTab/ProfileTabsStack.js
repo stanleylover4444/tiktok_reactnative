@@ -49,18 +49,22 @@ const ProfileTabs = () => (
     })}
   >
     <Tab.Screen
+      key={0}
       name="Posted"
       component={PostedVideosScreen}
     />
     <Tab.Screen
+      key={1}
       name="Hidden"
       component={PriveVideosScreen}
     />
     <Tab.Screen
+      key={2}
       name="Saved"
       component={SavedVideosScreen}
     />
     <Tab.Screen
+      key={3}
       name="Liked"
       component={LikedVideosScreen}
     />

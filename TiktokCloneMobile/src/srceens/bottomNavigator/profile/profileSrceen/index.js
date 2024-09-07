@@ -28,27 +28,27 @@ const ProfileScreen = () => {
         <View style={styles.groupNumber}>
           <View style={styles.itemGroup}>
             <Text style={styles.textItem}>02 </Text>
-            <Text style={{ fontSize: 12, color: colors.textColors }}>Đã follow </Text>
+            <Text style={{ fontSize: 12, color: colors.textColors }}>Đã fo23llow </Text>
           </View>
 
           <View style={styles.itemGroup}>
             <Text style={styles.textItem}>100 </Text>
-            <Text style={{ fontSize: 12, color: colors.textColors }}>Follower </Text>
+            <Text style={{ fontSize: 12, color: colors.textColors }}>Foll23ower </Text>
           </View>
 
           <View style={styles.itemGroup}>
             <Text style={styles.textItem}>231232</Text>
-            <Text style={{ fontSize: 12, color: colors.textColors }}>Thích</Text>
+            <Text style={{ fontSize: 12, color: colors.textColors }}>T23hích</Text>
           </View>
         </View >
 
         <View style={styles.groupButton}>
           <TouchableOpacity style={styles.Button} onPress={handleButtonEditProfilePress}>
-            <Text style={{ fontWeight: "bold", color: colors.textColors }}>Sửa hồ sơ</Text>
+            <Text style={{ fontWeight: "bold", color: colors.textColors }}>Sử23a hồ sơ</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.Button} onPress={handleButtonSettingPress}>
-            <Text style={{ fontWeight: "bold", color: colors.textColors }}>Tài khoản</Text>
+            <Text style={{ fontWeight: "bold", color: colors.textColors }}>Tà23i khoản</Text>
           </TouchableOpacity>
         </View>
       </View>

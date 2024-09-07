@@ -99,8 +99,10 @@ const BottomTabNavigator = () => (
     />
     <Tab.Screen 
       name="Hồ sơ"
+      
       component={ProfileStackNavigator} // Use the profile stack navigator here
       options={{
+       
         headerStyle: { backgroundColor: 'black' },
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
