@@ -28,13 +28,13 @@ const HomeScreen = () => {
 
   return (
     <View>
-    <FlatList
+    {/* <FlatList
       data={videos}
       renderItem={renderItem}
       keyExtractor={item => item.id}
       pagingEnabled
       showsVerticalScrollIndicator={false}
-    />
+    /> */}
 
     
     </View>
