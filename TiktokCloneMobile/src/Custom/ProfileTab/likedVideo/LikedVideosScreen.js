@@ -1,16 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import styles from './style';
 
 const LikedVideosScreen = () => (
   <View style={styles.container}>
     <Text>Liked Videos</Text>
   </View>
 );
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+
 export default LikedVideosScreen;

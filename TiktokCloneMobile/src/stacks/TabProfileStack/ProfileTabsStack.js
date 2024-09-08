@@ -5,10 +5,10 @@ import SvgSavedIcon from '../../assets/icons/ic_save';
 import SvgLikedIcon from '../../assets/icons/ic_heart';
 import SvgHiddenIcon from '../../assets/icons/ic_prive';
 
-import PostedVideosScreen from './PostedVideosScreen';
-import SavedVideosScreen from './SavedVideosScreen';
-import LikedVideosScreen from './LikedVideosScreen';
-import PriveVideosScreen from './PriveVideosScreen';
+import PostedVideosScreen from '../../Custom/ProfileTab/postVideo/PostedVideosScreen';
+import SavedVideosScreen from '../../Custom/ProfileTab/saveVideo/SavedVideosScreen';
+import LikedVideosScreen from '../../Custom/ProfileTab/likedVideo/LikedVideosScreen';
+import PriveVideosScreen from '../../Custom/ProfileTab/priveVideo/PriveVideosScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
