@@ -3,16 +3,20 @@ import { View, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./style";
 
-const ItemThumPost = ({ thum }) => {  // Thay đổi từ 'Thum' sang 'thum'
+const ItemVideoPost = ({ thum, uri, navigation }) => {
+
+  const handlePress = () => {
+    navigation.navigate('VideoPlayerComponent', { uri });  // Điều hướng đến VideoPlayerComponent
+  };
+  
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <View>
-          <View><Image style={styles.thumneo} source={{ uri: thum }} /></View> 
-        </View>
+      <TouchableOpacity onPress={handlePress}>
+        <Image style={styles.thumneo} source={{ uri: thum }} />
       </TouchableOpacity>
     </View>
   );
 };
 
-export default ItemThumPost;
+export default ItemVideoPost;

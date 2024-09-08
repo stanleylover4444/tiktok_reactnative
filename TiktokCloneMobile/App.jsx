@@ -11,7 +11,7 @@ import SignUpScreen from './src/srceens/signup';
 import HomeScreen from './src/srceens/bottomNavigator/home';
 import ChatScreen from './src/srceens/bottomNavigator/chat/chatSrceen';
 import SearchScreen from './src/srceens/bottomNavigator/search';
-import UploadScreen from './src/srceens/bottomNavigator/uploadvideo'; 
+import UploadScreen from './src/srceens/bottomNavigator/uploadvideo';
 
 import MsgScreen from './src/srceens/bottomNavigator/chat/msgSrceen';
 
@@ -30,7 +30,8 @@ import ProfileIcon from './src/assets/icons/ic_account';
 import SearchScreenHeader from './src/components/ItemSearch/SearchScreen';
 
 // Import colors
-import colors  from './src/theme/colors';
+import colors from './src/theme/colors';
+import VideoPlayerComponent from './src/components/ItemVideoPlay/VideoPlayerComponent';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -76,39 +77,38 @@ const BottomTabNavigator = () => (
     })}
   >
     <Tab.Screen name="Trang chủ" component={HomeScreen} options={{ headerShown: false }} />
-    <Tab.Screen 
-      name="Tìm kiếm" 
-      component={SearchScreen} 
+    <Tab.Screen
+      name="Tìm kiếm"
+      component={SearchScreen}
       options={{
         headerTitle: () => <SearchScreenHeader />,
         headerStyle: { backgroundColor: 'black' },
-      }} 
+      }}
     />
     <Tab.Screen name="Đăng" component={UploadScreen} options={{ headerShown: false }} />
-    <Tab.Screen 
-      name="Hộp thư" 
-      component={ChatStackNavigator} 
+    <Tab.Screen
+      name="Hộp thư"
+      component={ChatStackNavigator}
       options={{
         headerStyle: { backgroundColor: 'black' },
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
         headerShown: false
-        
-      }} 
+
+      }}
     />
-    <Tab.Screen 
-      name="Hồ sơ"
-      
+    <Tab.Screen
+      name="Hồ sơ"  
       component={ProfileStackNavigator}
       options={{
-       
+
         headerStyle: { backgroundColor: 'black' },
         headerTitleStyle: { fontSize: 16, fontWeight: 'bold' },
         headerTintColor: colors.textColors,
         headerTitleAlign: 'center',
         headerShown: false
-      }} 
+      }}
     />
   </Tab.Navigator>
 );
@@ -122,6 +122,12 @@ const App = () => {
         <Stack.Screen name="Message" component={MsgScreen} options={{ headerShown: false }} />
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} options={{ headerShown: false }} />
         <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ headerShown: false }} />
+
+        <Stack.Screen
+          name="VideoPlayerComponent"
+          component={VideoPlayerComponent}
+          options={{ title: 'Video Player', headerShown: false }} // Tiêu đề khi xem video
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
