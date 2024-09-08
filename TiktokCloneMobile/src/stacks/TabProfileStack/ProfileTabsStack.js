@@ -1,5 +1,7 @@
 import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
 import SvgPostedIcon from '../../assets/icons/ic_list';
 import SvgSavedIcon from '../../assets/icons/ic_save';
 import SvgLikedIcon from '../../assets/icons/ic_heart';
@@ -10,6 +12,9 @@ import SavedVideosScreen from '../../Custom/ProfileTab/saveVideo/SavedVideosScre
 import LikedVideosScreen from '../../Custom/ProfileTab/likedVideo/LikedVideosScreen';
 import PriveVideosScreen from '../../Custom/ProfileTab/priveVideo/PriveVideosScreen';
 
+import VideoPlayerComponent from '../../components/ItemVideoPlay/VideoPlayerComponent';
+
+const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
 
 const ProfileTabs = () => (
@@ -35,7 +40,7 @@ const ProfileTabs = () => (
         }
         return IconComponent;
       },
-      tabBarLabel: () => null, // Hides the label
+      tabBarLabel: () => null, // Ẩn label
       tabBarActiveTintColor: 'white',
       tabBarInactiveTintColor: 'gray',
       tabBarStyle: {
@@ -71,4 +76,16 @@ const ProfileTabs = () => (
   </Tab.Navigator>
 );
 
-export default ProfileTabs;
+// Tạo Stack Navigator bao gồm ProfileTabs và VideoPlayerComponent
+const ProfileStack = () => (
+  <Stack.Navigator>
+    <Stack.Screen
+      name="ProfileTabs"
+      component={ProfileTabs}
+      options={{ headerShown: false }} // Ẩn header của tab
+    />
+  
+  </Stack.Navigator>
+);
+
+export default ProfileStack;

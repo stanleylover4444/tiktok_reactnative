@@ -4,11 +4,14 @@ import styles from './style';
 import { videos } from '../fakedata';
 import ItemVideoPost from '../../../components/ItemProfile/itemPostVideo';
 
-const PostedVideosScreen = () => {
+const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop để điều hướng
+
   const renderItemThumPost = ({ item }) => (
     <ItemVideoPost
       key={item.id}
-      thum={item.thum}  // Sửa lại đúng tên prop
+      thum={item.thum}  // Prop 'thum' để hiển thị hình ảnh
+      uri={item.uri}    // Thêm prop 'uri' để điều hướng video
+      navigation={navigation}  // Truyền navigation xuống component
     />
   );
 
@@ -18,7 +21,7 @@ const PostedVideosScreen = () => {
         data={videos}
         renderItem={renderItemThumPost}
         keyExtractor={item => item.id}
-        numColumns={3}  // Thay đổi số cột ở đây
+        numColumns={3}  // Số cột của lưới
       />
     </View>
   );
