@@ -1,69 +1,54 @@
 
 
 import { StyleSheet } from "react-native";
+import colors from "../../theme/colors";
 const styles = StyleSheet.create({
     modalContainer: {
       flex: 1,
       justifyContent: 'flex-end',
-      alignItems: 'center',
-      backgroundColor: 'rgba(0,0,0,0.5)', // Semi-transparent background
+      alignItems: 'center', 
     },
     modalContent: {
       width: '100%',
+      height: 500,
       maxHeight: '80%', // Adjust as needed
-      backgroundColor: '#fff',
+      backgroundColor: 'black',
       borderTopLeftRadius: 10,
       borderTopRightRadius: 10,
       padding: 15,
     },
-    modalTitle: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      marginBottom: 10,
-    },
+   
     commentList: {
       flexGrow: 0,
       marginBottom: 10,
     },
     commentItem: {
       padding: 10,
-      borderBottomWidth: 1,
-      borderBottomColor: '#ddd',
     },
     commentText: {
       fontSize: 16,
+      color:"white"
     },
     inputContainer: {
+      
       flexDirection: 'row',
       alignItems: 'center',
-      marginBottom: 10,
     },
     textInput: {
+      backgroundColor:colors.colorGrayDark,
       flex: 1,
-      borderColor: '#ddd',
+      placeholderTextColor :"",
       borderWidth: 1,
-      borderRadius: 5,
+      borderRadius: 100,
       padding: 10,
       marginRight: 10,
     },
     addButton: {
-      backgroundColor: '#007bff',
+      backgroundColor: '#FE2C55',
       padding: 10,
-      borderRadius: 5,
+      borderRadius: 100,
     },
-    addButtonText: {
-      color: '#fff',
-      fontSize: 16,
-    },
-    closeButton: {
-      marginTop: 10,
-      backgroundColor: '#007bff',
-      padding: 10,
-      borderRadius: 5,
-    },
-    closeButtonText: {
-      color: '#fff',
-      fontSize: 16,
-    },
+    
+
   });
   export default styles;

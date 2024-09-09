@@ -1,31 +1,47 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import Video from 'react-native-video'; // Sử dụng 'expo-av' cho video playback hoặc thư viện Video của bạn
+import React, { useState } from 'react';
+import { Text, View, TouchableOpacity } from 'react-native';
+import Video from 'react-native-video'; // Use 'expo-av' if needed
 import { useRoute } from '@react-navigation/native';
+import styles from './style';
+import ModalComponent from '../itemModelCommentVideo';
 
 const VideoPlayerComponent = () => {
-    const route = useRoute();
-    const { uri } = route.params;  // Nhận uri từ params
+  const [modalVisible, setModalVisible] = useState(false);
+  const route = useRoute();
+  const { uri } = route.params;  // Receiving uri from params
 
-    return (
-        <View style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex',
-            position: 'relative'
-        }}>
-            <Video
-                source={{ uri: uri }}
-                style={{ width: '100%', height: '100%', position: 'relative' }}
-                controls={false}
-                resizeMode="cover"
-            />
-            <View style={{ position: 'absolute', zIndex: 1 }}>
-                <Text>Huy</Text>
-            </View>
-        </View>
-    );
+  const handleCommentPress = (videoUri) => {
+    setModalVisible(true);
+    // Add additional functionality here if needed
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Video
+        source={{ uri: uri }}
+        style={styles.videoplay}
+        controls={false}
+        resizeMode="cover"
+      />
+      <View style={styles.containerComponent}>
+        <TouchableOpacity 
+          style={styles.commentButton} 
+          onPress={() => handleCommentPress(uri)}  // Pass the video URI
+        >
+          <Text style={styles.commentButtonText}>Comment</Text>
+        </TouchableOpacity>
+      </View>
+
+      <ModalComponent
+        visible={modalVisible}
+        onClose={handleCloseModal}
+      />
+    </View>
+  );
 };
 
 export default VideoPlayerComponent;
