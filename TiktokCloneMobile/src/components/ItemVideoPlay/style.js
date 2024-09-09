@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 
 
-    
     container: {
         flex: 1,
         justifyContent: 'center',
@@ -16,10 +15,22 @@ const styles = StyleSheet.create({
         height: '100%', 
          position: 'relative'
       },
-      containerComponent:{
+      buttonContainer:{
         position: 'absolute', 
-        zIndex: 1
+        padding:20,
+        bottom:50,
+        right: 10, 
+        flexDirection: 'column', 
+      },
+      commentButton :{
+        marginVertical : 10
+      },
 
+      ItemComponentContainer : {
+        position: 'absolute', 
+        padding:20,
+        bottom:50,
+        flexDirection: 'column', 
       }
 
 

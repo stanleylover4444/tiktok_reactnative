@@ -5,6 +5,11 @@ import { useRoute } from '@react-navigation/native';
 import styles from './style';
 import ModalComponent from '../itemModelCommentVideo';
 
+
+import CommentIcon from '../../assets/icons/ic_cmt';
+import IconLikeVideo from '../../assets/icons/ic_likevideo';
+import IconSaveVideo from '../../assets/icons/ic_saveVideo';
+
 const VideoPlayerComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const route = useRoute();
@@ -26,15 +31,53 @@ const VideoPlayerComponent = () => {
         style={styles.videoplay}
         controls={false}
         resizeMode="cover"
+        paused
       />
-      <View style={styles.containerComponent}>
+    
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity 
+          
+          onPress={() => handleCommentPress()}
+        >
+       <IconLikeVideo/>
+        </TouchableOpacity>
+
         <TouchableOpacity 
           style={styles.commentButton} 
-          onPress={() => handleCommentPress(uri)}  // Pass the video URI
+          onPress={() => handleCommentPress()}
         >
-          <Text style={styles.commentButtonText}>Comment</Text>
+        <CommentIcon/>
+        </TouchableOpacity>
+        <TouchableOpacity 
+         
+          onPress={() => handleCommentPress()}
+        >
+         <IconSaveVideo/>
         </TouchableOpacity>
       </View>
+
+      <View style={styles.ItemComponentContainer}>
+        <TouchableOpacity 
+          
+          onPress={() => handleCommentPress()}
+        >
+       <IconLikeVideo/>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+          style={styles.commentButton} 
+          onPress={() => handleCommentPress()}
+        >
+        <CommentIcon/>
+        </TouchableOpacity>
+        <TouchableOpacity 
+         
+          onPress={() => handleCommentPress()}
+        >
+         <IconSaveVideo/>
+        </TouchableOpacity>
+      </View>
+      
 
       <ModalComponent
         visible={modalVisible}

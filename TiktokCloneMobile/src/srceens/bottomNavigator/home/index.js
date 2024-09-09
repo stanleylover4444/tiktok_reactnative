@@ -1,8 +1,10 @@
 import React, { useState, useRef } from 'react';
-import { View, FlatList, Text, TouchableOpacity, Alert } from 'react-native';
+import { View, FlatList, Text, TouchableOpacity } from 'react-native';
 import Video from 'react-native-video';
 import styles from './style';
 import ModalComponent from '../../../components/itemModelCommentVideo';
+
+import CommentIcon from '../../../assets/icons/ic_cmt';
 
 const videos = [
   { id: '1', uri: require('../../../assets/video/2.mp4') },
@@ -30,13 +32,30 @@ const HomeScreen = () => {
         style={styles.video}
         controls={false}
         resizeMode="cover"
+        paused
       />
-      <TouchableOpacity 
-        style={styles.commentButton} 
-        onPress={() => handleCommentPress(item.id)}
-      >
-        <Text style={styles.commentButtonText}>Comment</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity 
+          style={styles.commentButton} 
+          onPress={() => handleCommentPress(item.id)}
+        >
+          <Text style={styles.commentButtonText}>Like</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+       
+          onPress={() => handleCommentPress(item.id)}
+        >
+       <CommentIcon/>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+       
+          onPress={() => handleCommentPress(item.id)}
+        >
+          <Text style={styles.commentButtonText}>Save</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 
