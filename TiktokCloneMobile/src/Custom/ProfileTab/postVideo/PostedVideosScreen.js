@@ -10,6 +10,7 @@ const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop đ�
   const renderItemThumPost = ({ item }) => (
     <ItemVideoPost
     key={item.id}
+    avatauploader={item.avatauploader}
     thum={item.thum}
     uri={item.uri}
     uploader={item.uploader}
@@ -17,6 +18,7 @@ const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop đ�
     comments={item.comments}
     saves={item.saves}
     caption={item.caption}
+    share={item.share}
     navigation={navigation}  // Truyền navigation xuống component
   />
   );

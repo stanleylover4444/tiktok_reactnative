@@ -3,10 +3,10 @@ import { View, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from "./style";
 
-const ItemVideoPost = ({ thum, uri, uploader, likes, comments, saves, caption, navigation }) => {
+const ItemVideoPost = ({ thum, uri, uploader, likes, comments, saves, caption,share ,avatauploader , navigation }) => {
 
   const handlePress = () => {
-    navigation.navigate('VideoPlayerComponent', { uri ,uploader, likes, comments, saves, caption, });  // Điều hướng đến VideoPlayerComponent
+    navigation.navigate('VideoPlayerComponent', { uri ,uploader, likes, comments, avatauploader, share, saves, caption, });  // Điều hướng đến VideoPlayerComponent
   };
   
 

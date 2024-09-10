@@ -18,16 +18,30 @@ const styles = StyleSheet.create({
       buttonContainer:{
         position: 'absolute', 
         padding:20,
-        bottom:100,
+        bottom:5,
         right: 10, 
         flexDirection: 'column', 
+        alignItems : "center",
+        justifyContent:"center",
+
+
       },
       textCountNumber :{
        marginBottom :20,
-       marginStart : 5,
+     
        color : "white",
        
       },
+
+      uploaderImage : {
+          height : 48,
+          width : 48,
+          borderRadius : 50,
+          borderWidth: 1, // Add a border width (adjust as needed)
+          borderColor: 'white', // Specify the border color (use any color you prefer)
+          marginBottom : 20
+      },
+
 
       ItemComponentContainer : {
         position: 'absolute', 
@@ -44,7 +58,7 @@ const styles = StyleSheet.create({
       },
       Caption :{
         color:"white",
-        fontSize : 20,
+        fontSize : 15,
      
       }
 

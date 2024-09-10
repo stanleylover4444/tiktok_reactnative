@@ -1,23 +1,33 @@
 import React, { useState, useRef } from 'react';
-import { View, FlatList, Text, TouchableOpacity } from 'react-native';
+import { View, FlatList, Text, TouchableOpacity, Image } from 'react-native';
 import Video from 'react-native-video';
 import styles from './style';
 import ModalComponent from '../../../components/itemModelCommentVideo';
+import { videos } from '../../../Custom/ProfileTab/fakedata';
 
 import CommentIcon from '../../../assets/icons/ic_cmt';
-
-const videos = [
-  { id: '1', uri: require('../../../assets/video/2.mp4') },
-  // Add more videos if needed
-];
+import IconLikeVideo from '../../../assets/icons/ic_likevideo';
+import IconSaveVideo from '../../../assets/icons/ic_saveVideo';
+import IconShareVideo from '../../../assets/icons/ic_share';
 
 const HomeScreen = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const videoRefs = useRef({});
 
-  const handleCommentPress = (videoId) => {
-    // This can be replaced with actual functionality
+  const handleCommentPress = () => {
     setModalVisible(true);
+  };
+
+  const handleLikePress = () => {
+    console.log('Liked the video');
+  };
+
+  const handleSavePress = () => {
+    console.log('Saved the video');
+  };
+
+  const handleSharePress = () => {
+    console.log('Shared the video');
   };
 
   const handleCloseModal = () => {
@@ -27,33 +37,50 @@ const HomeScreen = () => {
   const renderItem = ({ item }) => (
     <View style={styles.videoContainer}>
       <Video
-        ref={ref => videoRefs.current[item.id] = ref}
-        source={item.uri}
+        ref={(ref) => (videoRefs.current[item.id] = ref)}
+        source={{ uri: item.uri }}
         style={styles.video}
         controls={false}
         resizeMode="cover"
         paused
       />
+
       <View style={styles.buttonContainer}>
-        <TouchableOpacity 
-          style={styles.commentButton} 
-          onPress={() => handleCommentPress(item.id)}
-        >
-          <Text style={styles.commentButtonText}>Like</Text>
+        <TouchableOpacity>
+          <Image
+            source={{ uri: item.avatauploader }}
+            style={styles.uploaderImage}
+          />
         </TouchableOpacity>
 
-        <TouchableOpacity 
-       
-          onPress={() => handleCommentPress(item.id)}
-        >
-       <CommentIcon/>
+        <TouchableOpacity onPress={handleLikePress}>
+          <IconLikeVideo />
+        </TouchableOpacity>
+        <Text style={styles.textCountNumber}>{item.likes}</Text>
+
+        <TouchableOpacity onPress={handleCommentPress}>
+          <CommentIcon />
+        </TouchableOpacity>
+        <Text style={styles.textCountNumber}>{item.comments}</Text>
+
+        <TouchableOpacity onPress={handleSavePress}>
+          <IconSaveVideo />
+        </TouchableOpacity>
+        <Text style={styles.textCountNumber}>{item.saves}</Text>
+
+        <TouchableOpacity onPress={handleSharePress}>
+          <IconShareVideo />
+        </TouchableOpacity>
+        <Text style={styles.textCountNumber}>{item.share}</Text>
+      </View>
+
+      <View style={styles.itemDetailsContainer}>
+        <TouchableOpacity onPress={() => console.log("Pressed user")}>
+          <Text style={styles.uploaderName}>{item.uploader}</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
-       
-          onPress={() => handleCommentPress(item.id)}
-        >
-          <Text style={styles.commentButtonText}>Save</Text>
+        <TouchableOpacity onPress={() => console.log("Pressed caption")}>
+          <Text style={styles.caption}>{item.caption}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -64,14 +91,11 @@ const HomeScreen = () => {
       <FlatList
         data={videos}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={(item) => item.id}
         pagingEnabled
         showsVerticalScrollIndicator={false}
       />
-      <ModalComponent
-        visible={modalVisible}
-        onClose={handleCloseModal}
-      />
+      <ModalComponent visible={modalVisible} onClose={handleCloseModal} />
     </View>
   );
 };
