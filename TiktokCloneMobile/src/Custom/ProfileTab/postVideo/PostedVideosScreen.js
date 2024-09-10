@@ -4,15 +4,21 @@ import styles from './style';
 import { videos } from '../fakedata';
 import ItemVideoPost from '../../../components/ItemProfile/itemPostVideo';
 
+
 const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop để điều hướng
 
   const renderItemThumPost = ({ item }) => (
     <ItemVideoPost
-      key={item.id}
-      thum={item.thum}  // Prop 'thum' để hiển thị hình ảnh
-      uri={item.uri}    // Thêm prop 'uri' để điều hướng video
-      navigation={navigation}  // Truyền navigation xuống component
-    />
+    key={item.id}
+    thum={item.thum}
+    uri={item.uri}
+    uploader={item.uploader}
+    likes={item.likes}
+    comments={item.comments}
+    saves={item.saves}
+    caption={item.caption}
+    navigation={navigation}  // Truyền navigation xuống component
+  />
   );
 
   return (

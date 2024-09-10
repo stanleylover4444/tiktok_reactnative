@@ -34,7 +34,7 @@ export const videos = [
     saves: 6230,
     caption: 'Check out this amazing content!'
   },
-  // Add more video objects with similar structure
+ 
 ];
 
 const FakeDataVideo = () => {

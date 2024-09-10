@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import Video from 'react-native-video'; // Use 'expo-av' if needed
 import { useRoute } from '@react-navigation/native';
 import styles from './style';
 import ModalComponent from '../itemModelCommentVideo';
-
 
 import CommentIcon from '../../assets/icons/ic_cmt';
 import IconLikeVideo from '../../assets/icons/ic_likevideo';
@@ -13,11 +12,25 @@ import IconSaveVideo from '../../assets/icons/ic_saveVideo';
 const VideoPlayerComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const route = useRoute();
-  const { uri } = route.params;  // Receiving uri from params
+  const { uri, uploader, likes, comments, saves, caption } = route.params;  // Nhận các tham số từ route
 
-  const handleCommentPress = (videoUri) => {
+  
+  useEffect(() => {
+    console.log(route.params);
+  }, [route.params]);
+
+  const handleLikePress = () => {
+    console.log("Liked the video");
+   
+  };
+
+  const handleCommentPress = () => {
     setModalVisible(true);
-    // Add additional functionality here if needed
+  };
+
+  const handleSavePress = () => {
+    console.log("Saved the video");
+ 
   };
 
   const handleCloseModal = () => {
@@ -33,51 +46,33 @@ const VideoPlayerComponent = () => {
         resizeMode="cover"
         paused
       />
-    
-      <View style={styles.buttonContainer}>
-        <TouchableOpacity 
-          
-          onPress={() => handleCommentPress()}
-        >
-       <IconLikeVideo/>
-        </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={styles.commentButton} 
-          onPress={() => handleCommentPress()}
-        >
-        <CommentIcon/>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity onPress={handleLikePress}>
+          <IconLikeVideo />
         </TouchableOpacity>
-        <TouchableOpacity 
-         
-          onPress={() => handleCommentPress()}
-        >
-         <IconSaveVideo/>
+        <Text style={styles.Caption}>{String(likes)}</Text>
+
+        <TouchableOpacity style={styles.commentButton} onPress={handleCommentPress}>
+          <CommentIcon />
         </TouchableOpacity>
+        <Text style={styles.Caption}>{String(comments)}</Text>
+
+        <TouchableOpacity onPress={handleSavePress}>
+          <IconSaveVideo />
+        </TouchableOpacity>
+        <Text style={styles.Caption}>{String(saves)}</Text>
       </View>
 
       <View style={styles.ItemComponentContainer}>
-        <TouchableOpacity 
-          
-          onPress={() => handleCommentPress()}
-        >
-       <IconLikeVideo/>
+        <TouchableOpacity onPress={() => console.log("Pressed user")}>
+        <Text style={styles.Caption}>{String(uploader)}</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={styles.commentButton} 
-          onPress={() => handleCommentPress()}
-        >
-        <CommentIcon/>
-        </TouchableOpacity>
-        <TouchableOpacity 
-         
-          onPress={() => handleCommentPress()}
-        >
-         <IconSaveVideo/>
+        <TouchableOpacity onPress={() => console.log("Pressed caption")}>
+        <Text style={styles.Caption}>{String(caption)}</Text>
         </TouchableOpacity>
       </View>
-      
 
       <ModalComponent
         visible={modalVisible}

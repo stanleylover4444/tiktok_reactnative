@@ -18,19 +18,34 @@ const styles = StyleSheet.create({
       buttonContainer:{
         position: 'absolute', 
         padding:20,
-        bottom:50,
+        bottom:100,
         right: 10, 
         flexDirection: 'column', 
       },
-      commentButton :{
-        marginVertical : 10
+      textCountNumber :{
+       marginBottom :20,
+       marginStart : 5,
+       color : "white",
+       
       },
 
       ItemComponentContainer : {
         position: 'absolute', 
         padding:20,
         bottom:50,
+       left: 10,
         flexDirection: 'column', 
+      }, 
+  
+      NameUser :{
+        color:"white",
+        fontSize : 20,
+        fontWeight : "bold"
+      },
+      Caption :{
+        color:"white",
+        fontSize : 20,
+     
       }
 
 
