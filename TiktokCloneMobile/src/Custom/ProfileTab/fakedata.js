@@ -9,11 +9,11 @@ export const videos = [
     avatauploader : "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/438262853_1742302276298837_5600512035682884669_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGP9k0sdJQyPrv5FV94vWfIEv0NCF-QbHUS_Q0IX5BsdfV55XG0iIWPqap5qrQOU0zlDglrDkFOAvl-kVIYB3iP&_nc_ohc=QaH5k9ZBrgIQ7kNvgHtltxn&_nc_ht=scontent.fhan3-2.fna&_nc_gid=AXr504K_IZO7YDF79kGglzU&oh=00_AYAhmpsYdxDGFW2ZbgL-5tMDacyZh0cH5KxIK8OoZtWd1Q&oe=66DF1AC3", thum: 'https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/453655690_1045840767166192_8472071150410146987_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHGAdd_EylMbgzbO2aXIik_v7EL6xDLaeC_sQvrEMtp4Ny3f3tgunCJdy3TQ5t1QpY5rQCI0hYI6IgegyMZfF8c&_nc_ohc=1KBz9uYI6BQQ7kNvgFxJdfr&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=AmL6KaAjXzmzeTHVhN_1w0a&oh=00_AYDzRzXdKnYaVoiQ6HNN8LC1lKc91CBkVYhRISDDJ04clw&oe=66DF237F',
     uri: require('../../assets/video/1.mp4'),
     uploader: 'Tiểu Mẫn',
-    likes: 10040,
-    comments: 23,
-    saves: 2,
+    likes: 100240,
+    comments: 223,
+    saves: 22,
     caption: 'This is a great video!',
-    share : 3
+    share : 32
   },
   {
     id: '2',
@@ -21,9 +21,9 @@ export const videos = [
     thum: 'https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/453655690_1045840767166192_8472071150410146987_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHGAdd_EylMbgzbO2aXIik_v7EL6xDLaeC_sQvrEMtp4Ny3f3tgunCJdy3TQ5t1QpY5rQCI0hYI6IgegyMZfF8c&_nc_ohc=1KBz9uYI6BQQ7kNvgFxJdfr&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=AmL6KaAjXzmzeTHVhN_1w0a&oh=00_AYDzRzXdKnYaVoiQ6HNN8LC1lKc91CBkVYhRISDDJ04clw&oe=66DF237F',
     uri: require('../../assets/video/2.mp4'),
     uploader: 'Tường Vi',
-    likes: 200,
+    likes: 2200,
     comments: 30,
-    saves: 60,
+    saves: 602,
     caption: 'Check out this amazing content!',
     share : 40
   },
