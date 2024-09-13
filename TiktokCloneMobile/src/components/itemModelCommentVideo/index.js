@@ -29,10 +29,14 @@ const ModalComponent = ({ visible, onClose }) => {
       animationType="slide"
       onRequestClose={onClose}
     >
+
+
       <TouchableWithoutFeedback onPress={onClose}>
         <View style={styles.modalContainer}>
           <TouchableWithoutFeedback>
             <View style={styles.modalContent}>
+
+
               <FlatList
                 data={comments}
                 renderItem={({ item }) => (
@@ -46,6 +50,8 @@ const ModalComponent = ({ visible, onClose }) => {
                 keyExtractor={item => item.id}
                 style={styles.commentList}
               />
+
+
               <View style={styles.inputContainer}>
                 <TextInput
                   style={styles.textInput}
@@ -57,6 +63,11 @@ const ModalComponent = ({ visible, onClose }) => {
                 <TouchableOpacity style={styles.addButton} onPress={handleAddComment}>
                   <Text style={styles.addButtonText}>Post</Text>
                 </TouchableOpacity>
+
+                
+
+
+
               </View>
             </View>
           </TouchableWithoutFeedback>
