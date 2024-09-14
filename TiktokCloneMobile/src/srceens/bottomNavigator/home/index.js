@@ -75,11 +75,11 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.itemDetailsContainer}>
-        <TouchableOpacity onPress={() => console.log("Pressed user")}>
+        <TouchableOpacity onPress={() => console.log("Pressedd user")}>
           <Text style={styles.uploaderName}>{item.uploader}</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => console.log("Pressed caption")}>
+        <TouchableOpacity onPress={() => console.log("Pressedd caption")}>
           <Text style={styles.caption}>{item.caption}</Text>
         </TouchableOpacity>
       </View>
