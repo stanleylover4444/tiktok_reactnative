@@ -5,7 +5,7 @@ import { videos } from '../fakedata';
 import ItemVideoPost from '../../../components/ItemProfile/itemPostVideo';
 
 
-const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop để điều hướng
+const PostedVideosScreen = ({ navigation }) => { 
 
   const renderItemThumPost = ({ item }) => (
     <ItemVideoPost
@@ -19,7 +19,7 @@ const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop đ�
     saves={item.saves}
     caption={item.caption}
     share={item.share}
-    navigation={navigation}  // Truyền navigation xuống component
+    navigation={navigation}  
   />
   );
 
@@ -29,7 +29,7 @@ const PostedVideosScreen = ({ navigation }) => {  // Nhận navigation prop đ�
         data={videos}
         renderItem={renderItemThumPost}
         keyExtractor={item => item.id}
-        numColumns={3}  // Số cột của lưới
+        numColumns={3} 
       />
     </View>
   );

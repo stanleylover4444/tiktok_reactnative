@@ -4,19 +4,18 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-      
-  
   },
   containerbutton: {
-    
-    marginStart  : 350,
-    paddingTop : 30,
- 
+    marginStart  : 400,
+    paddingTop : 50,
   },
 
   containerend: {
+    marginBottom : 30,
+   alignSelf  : "center",
     flex:1,
-    justifyContent : "flex-end"
+    justifyContent : "flex-end",
+    // flexDirection  : "row"
  
   },
   button: {
@@ -24,8 +23,9 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 50,
     alignSelf: 'center',
+    marginHorizontal : 5,
     marginBottom: 16,
-    elevation: 5, // Để tạo hiệu ứng bóng cho nút
+    elevation: 5,
   },
   buttonText: {
     fontSize: 18,

@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   },
   thumneo : {
     height : 200,
-    width : 200,
+    width : 170,
    
   }
 });

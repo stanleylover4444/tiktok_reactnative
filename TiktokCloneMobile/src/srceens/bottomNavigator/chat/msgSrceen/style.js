@@ -72,7 +72,8 @@ borderRadius : 50
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 20,
-    paddingHorizontal: 10,
+    paddingHorizontal: 20,
+    marginHorizontal : 10
   },
 });
 export default styles;

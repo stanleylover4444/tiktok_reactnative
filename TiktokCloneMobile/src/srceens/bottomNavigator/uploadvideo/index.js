@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Alert, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Alert, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { Camera, useCameraDevice } from 'react-native-vision-camera';
 import { useCameraPermission } from 'react-native-vision-camera';
-import IconShutter from '../../../assets/icons/ic_shutter1';
+import ic_replay from '../../../assets/icons/ic_replay';
 import styles from './style';
 
 const UploadScreen = () => {
@@ -86,27 +86,30 @@ const UploadScreen = () => {
       <View style={styles.containerbutton}>
 
         <TouchableOpacity style={[styles.button, styles.toggleButton]} onPress={toggleCamera}>
-
+        <Image
+              source={require('../../../assets/images/1.png')}
+              style={{height : 24, width : 24}}
+            />
         </TouchableOpacity>
 
-        <TouchableOpacity style={[styles.button, styles.toggleButton]} onPress={toggleCamera}>
 
-        </TouchableOpacity>
 
 
       </View>
 
       <View style={styles.containerend}>
+          <View style={{flexDirection : 'row'}}>
       <TouchableOpacity style={styles.button} onPress={takePhoto}>
-        <IconShutter />
+      <Text style={styles.buttonText}>Chụp </Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={[styles.button, isRecording ? styles.recordingButton : styles.recordButton]}
         onPress={toggleRecording}
       >
-        <Text style={styles.buttonText}>{isRecording ? 'Dừng Quay' : 'Quay Video'}</Text>
+        <Text style={styles.buttonText}>{isRecording ? 'Dừng Quay' : 'Quay '}</Text>
       </TouchableOpacity>
+      </View>
 
       </View>
 

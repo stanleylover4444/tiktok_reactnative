@@ -5,61 +5,46 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#F9F9F9',
   },
-  titleText: {
-    fontSize: 40,
-    fontWeight: 'bold',
-    color: "#FE2C55"
-  },
-  inputContainerItemALll: {
-    flex: 1,
-    paddingTop: 50
-  },
-  inputContainer: {
+  logoContainer: {
+    alignItems: 'center',
     marginBottom: 30,
   },
-  inputLabel: {
-    fontSize: 20,
-    marginBottom: 5,
-    fontWeight: "bold"
+  logo: {
+    marginTop : 30,
+    width: 200,
+    height: 200,
+    resizeMode: 'contain',
+    
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 20,
+    marginTop : 130,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderBottomWidth: 1,
-    paddingHorizontal: 10,
-    paddingRight: 40, 
-  }, toggleButton: {
-    position: 'absolute',
-    right: 10,
-    top: 10,
-  },
-  toggleButtonText: {
+
+    width: '100%',
+    marginBottom: 15,
   },
   buttonContainer: {
-    marginTop: 20,
+    width: '100%',
+    marginTop: 10,
   },
   button: {
-    height: 45,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
+    backgroundColor: '#3399FF',
+    paddingVertical: 10,
+    borderRadius : 30
   },
   containerEnd: {
     marginTop: 20,
     alignItems: 'center',
   },
-  textend: {
-    color: 'gray',
-    fontWeight: "bold",
-    fontSize: 16,
+  createAccountButton: {
+    marginTop: 10,
   },
 });
-
 export default styles;

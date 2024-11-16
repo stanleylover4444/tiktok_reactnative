@@ -8,7 +8,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MainScreen from './src/srceens/firstsrc';
 import LoginScreen from './src/srceens/login';
 import SignUpScreen from './src/srceens/signup';
-import HomeScreen from './src/srceens/bottomNavigator/home';
 import ChatScreen from './src/srceens/bottomNavigator/chat/chatSrceen';
 import SearchScreen from './src/srceens/bottomNavigator/search';
 import UploadScreen from './src/srceens/bottomNavigator/uploadvideo';
@@ -32,6 +31,8 @@ import SearchScreenHeader from './src/components/ItemSearch/SearchScreen';
 // Import colors
 import colors from './src/theme/colors';
 import VideoPlayerComponent from './src/components/ItemVideoPlay/VideoPlayerComponent';
+import HomeScreen from './src/srceens/bottomNavigator/home';
+import { UserProvider } from './src/redux/UserContext';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -115,6 +116,7 @@ const BottomTabNavigator = () => (
 
 const App = () => {
   return (
+    <UserProvider>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="MainScreen" component={MainScreen} options={{ headerShown: false }} />
@@ -126,10 +128,11 @@ const App = () => {
         <Stack.Screen
           name="VideoPlayerComponent"
           component={VideoPlayerComponent}
-          options={{ title: 'Video Player', headerShown: false }} // Tiêu đề khi xem video
+          options={{ title: 'Video Player', headerShown: false }} 
         />
       </Stack.Navigator>
     </NavigationContainer>
+    </UserProvider>
   );
 };
 

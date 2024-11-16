@@ -5,11 +5,13 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor : "red"
+    
   },
   videoContainer: {
     width: width,
-    height: height * 0.94,
-    position: 'relative',
+    height: 725,
+   
   },
   video: {
     width: '100%',
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
   itemDetailsContainer: {
     position: 'absolute',
     padding: 20,
-    bottom: 50,
+    bottom: 10,
     left: 10,
     flexDirection: 'column',
   },

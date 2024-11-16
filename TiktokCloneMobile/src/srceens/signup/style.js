@@ -5,14 +5,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5'
+    backgroundColor: "white"
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-    color: "#FE2C55"
+    color: "#3399FF"
   },
   formContainer: {
     flex: 1,
@@ -25,9 +23,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   button: {
-    backgroundColor: '#FE2C55',
-    padding: 15,
-    borderRadius: 5,
+    backgroundColor: "#3399FF",
+    paddingVertical: 15,
+    borderRadius: 30,
     alignItems: 'center',
     marginTop: 15
   },
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   buttonTextLogin: {
-    color: '#FE2C55',
+    color:"#3399FF",
     fontSize: 16,
     textAlign: 'center',
     marginTop: 15
@@ -46,7 +44,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 20,
     color: '#666'
+  },
+  inputGroup: {
+    marginTop  : 10
   }
+  
 });
 
 export default styles;

@@ -12,7 +12,6 @@ import SavedVideosScreen from '../../Custom/ProfileTab/saveVideo/SavedVideosScre
 import LikedVideosScreen from '../../Custom/ProfileTab/likedVideo/LikedVideosScreen';
 import PriveVideosScreen from '../../Custom/ProfileTab/priveVideo/PriveVideosScreen';
 
-import VideoPlayerComponent from '../../components/ItemVideoPlay/VideoPlayerComponent';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
