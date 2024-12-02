@@ -46,12 +46,11 @@ export default StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
     padding: 10,
     borderRadius: 20,
     fontSize: 16,
+    backgroundColor : "black",
     marginBottom: 15,
-    backgroundColor: '#f9f9f9',
   },
   switchContainer: {
     flexDirection: 'row',

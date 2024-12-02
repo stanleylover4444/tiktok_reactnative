@@ -22,25 +22,22 @@ const MainScreen = () => {
 
       <View style={styles.paddingText}>
         <Text style={styles.textStyleSmall}>
-          Welcome to the globally popular
-        </Text>
-        <Text style={styles.textStyleSmall}>
-          short video platform, TikTok
+        Chào mừng bạn đến với TikTok
         </Text>
       </View>
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: '#33FFFF' }]}
+          style={[styles.button, { backgroundColor: 'black' }]}
           onPress={handleButtonLoginPress}
         >
-          <Text style={styles.buttonText}>LOGIN</Text>
+          <Text style={styles.buttonText}>Đăng nhập</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: '#33FFFF' }]}
+          style={[styles.button, { backgroundColor: 'black' }]}
           onPress={handleButtonSignUpPress}
         >
-          <Text style={styles.buttonText}>SIGN UP</Text>
+          <Text style={styles.buttonText}>Đăng ký</Text>
         </TouchableOpacity>
       </View>
     </View>

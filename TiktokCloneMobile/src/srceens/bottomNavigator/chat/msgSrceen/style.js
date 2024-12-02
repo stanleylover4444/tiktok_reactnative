@@ -70,6 +70,7 @@ borderRadius : 50
     flex: 1,
     height: 40,
     borderColor: '#ccc',
+    color : "black",
     borderWidth: 1,
     borderRadius: 20,
     paddingHorizontal: 20,

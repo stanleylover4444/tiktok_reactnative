@@ -81,6 +81,7 @@ const EditProfileScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Nhập họ và tên của bạn"
+          placeholderTextColor="white" 
           value={name}
           onChangeText={setName}
         />

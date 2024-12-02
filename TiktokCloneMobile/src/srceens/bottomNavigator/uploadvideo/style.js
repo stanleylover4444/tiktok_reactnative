@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   containerbutton: {
-    marginStart  : 400,
+    marginStart  : 300,
     paddingTop : 50,
   },
 

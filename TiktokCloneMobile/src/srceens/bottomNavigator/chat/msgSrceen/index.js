@@ -86,6 +86,7 @@ const MsgScreen = () => {
         <TextInput
           style={styles.textInput}
           placeholder="Nhập tin nhắn..."
+          placeholderTextColor={"black"}
           value={messageText}
           onChangeText={setMessageText} 
         />

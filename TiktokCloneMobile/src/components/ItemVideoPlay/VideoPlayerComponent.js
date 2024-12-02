@@ -13,7 +13,7 @@ import IconShareVideo from '../../assets/icons/ic_share';
 
 const VideoPlayerComponent = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [liked, setLiked] = useState(false); // Thêm state để theo dõi trạng thái "Like"
+  const [liked, setLiked] = useState(false); 
   const [saved, setsaved] = useState(false);
   const route = useRoute();
   const { uri, uploader, likes, comments, saves, caption, avatauploader, share } = route.params;

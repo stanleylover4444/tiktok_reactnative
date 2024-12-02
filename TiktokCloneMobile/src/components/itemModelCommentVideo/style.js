@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center', 
-  },
+    },
   modalContent: {
     width: '100%',
     height: 450,
-    backgroundColor: 'black',
+    backgroundColor: '#202020',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     padding: 15,

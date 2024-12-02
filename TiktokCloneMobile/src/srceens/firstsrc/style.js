@@ -24,8 +24,9 @@ const styles = StyleSheet.create({
 
   textStyleSmall: {
     fontWeight: 'bold',
-    fontSize: 20, 
+    fontSize: 25, 
     color: 'black', 
+    marginTop : 30
   },
 
   buttonContainer: {
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white',
     fontSize: 20,
   
   },

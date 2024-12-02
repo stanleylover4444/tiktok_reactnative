@@ -1,5 +1,5 @@
 import {useBottomTabBarHeight} from '@react-navigation/bottom-tabs';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {
   Animated,
   Image,
@@ -8,11 +8,13 @@ import {
   Text,
   View,
   Easing,
+  TouchableOpacity,
 } from 'react-native';
 import Video from 'react-native-video';
 import {VideoModel} from './videosData';
 import {WINDOW_HEIGHT, WINDOW_WIDTH} from './utils';
 import {getMusicNoteAnim} from './utils';
+import ModalComponent from '../../../components/itemModelCommentVideo';
 
 export default function VideoItem({
   data,
@@ -40,6 +42,17 @@ export default function VideoItem({
   };
   const musicNoteAnimation1 = getMusicNoteAnim(musicNoteAnimatedValue1, false);
   const musicNoteAnimation2 = getMusicNoteAnim(musicNoteAnimatedValue2, true);
+
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const handleCommentPress = () => {
+    setModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalVisible(false);
+  };
+
 
   const discAnimLoopRef = useRef<any>();
   const musicAnimLoopRef = useRef<any>();
@@ -155,10 +168,13 @@ export default function VideoItem({
           <Text style={styles.verticalBarText}>{likes}</Text>
         </View>
         <View style={styles.verticalBarItem}>
+
+          <TouchableOpacity onPress={handleCommentPress} > 
           <Image
             style={styles.verticalBarIcon}
             source={require('../../../assets/images/message-circle.png')}
           />
+          </TouchableOpacity >
           <Text style={styles.verticalBarText}>{comments}</Text>
         </View>
         <View style={styles.verticalBarItem}>
@@ -169,7 +185,9 @@ export default function VideoItem({
           <Text style={styles.verticalBarText}>Share</Text>
         </View>
       </View>
+      <ModalComponent visible={modalVisible} onClose={handleCloseModal} />
     </View>
+    
   );
 }
 

@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   commentItemContainer: {
     flexDirection: 'row',
     padding: 10,
+
   },
   avatar: {
     width: 40,

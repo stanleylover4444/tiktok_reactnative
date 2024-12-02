@@ -48,7 +48,7 @@ const LoginScreen = () => {
 
       <Text
         style={{
-          color: '#3399FF',
+          color: 'black',
           fontSize: 30,
           fontWeight: 'bold',
           marginTop: 30,
@@ -64,8 +64,8 @@ const LoginScreen = () => {
           keyboardType="phone-pad"
           mode="outlined"
           style={[styles.input, { borderRadius: 10 }]}
-          activeOutlineColor="#3399FF"
-          outlineColor="#3399FF"
+          activeOutlineColor="black"
+          outlineColor="black"
           placeholderTextColor="#888"
         />
 
@@ -76,8 +76,8 @@ const LoginScreen = () => {
           secureTextEntry
           mode="outlined"
           style={styles.input}
-          activeOutlineColor="#3399FF"
-          outlineColor="#3399FF"
+          activeOutlineColor="black"
+          outlineColor="black"
           placeholderTextColor="#888"
         />
       </View>
@@ -96,7 +96,7 @@ const LoginScreen = () => {
           mode="text"
           onPress={handleButtonCreate}
           style={styles.createAccountButton}>
-          <Text style={{ color: '#3399FF' }}>Bạn chưa có tài khoản? Đăng kí</Text>
+          <Text style={{ color: 'black' }}>Bạn chưa có tài khoản? Đăng kí</Text>
         </Button>
       </View>
     </View>

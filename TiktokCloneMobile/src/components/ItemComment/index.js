@@ -10,12 +10,12 @@ const CommentItem = ({ avatarUrl, userName, commentText, timeReply }) => {
 
   const toggleHeart = () => {
     setIsHeartActive(!isHeartActive);
-    if (isDislikeActive) setIsDislikeActive(false); // Optional: Deselect dislike when heart is selected
+    if (isDislikeActive) setIsDislikeActive(false); 
   };
 
   const toggleDislike = () => {
     setIsDislikeActive(!isDislikeActive);
-    if (isHeartActive) setIsHeartActive(false); // Optional: Deselect heart when dislike is selected
+    if (isHeartActive) setIsHeartActive(false); 
   };
 
   return (
@@ -33,30 +33,26 @@ const CommentItem = ({ avatarUrl, userName, commentText, timeReply }) => {
       </View>
 
       <View style={{ flexDirection: "row", paddingHorizontal: 10 }}>
-        <Text style={styles.timeReply}>{timeReply}</Text>
-
-        <TouchableOpacity>
-          <Text style={styles.Reply}>Trả lời</Text>
-        </TouchableOpacity>
+        
 
 
 
           <View style={styles.containertoggle}>
         <TouchableOpacity style={{marginHorizontal:5}} onPress={toggleHeart}>
           <IconHeart
-            color={isHeartActive ? "#FF0000" : "white"} // Red if active, black otherwise
+            color={isHeartActive ? "#FF3333" : "white"} // Red if active, black otherwise
             width={24}
             height={24}
           />
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={toggleDislike}>
+        {/* <TouchableOpacity onPress={toggleDislike}>
           <IconDislike
             color={isDislikeActive ? "#00FF00" : "white"} // Green if active, black otherwise
             width={24}
             height={24}
           />
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         </View>
       </View>
     </View>

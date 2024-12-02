@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: "#3399FF"
+    color: "black"
   },
   formContainer: {
     flex: 1,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   button: {
-    backgroundColor: "#3399FF",
+    backgroundColor: "black",
     paddingVertical: 15,
     borderRadius: 30,
     alignItems: 'center',
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   buttonTextLogin: {
-    color:"#3399FF",
+    color:"black",
     fontSize: 16,
     textAlign: 'center',
     marginTop: 15
@@ -47,6 +47,9 @@ const styles = StyleSheet.create({
   },
   inputGroup: {
     marginTop  : 10
+  },
+  input: {
+    backgroundColor : "white"
   }
   
 });

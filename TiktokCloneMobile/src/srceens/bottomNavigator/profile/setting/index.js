@@ -40,7 +40,7 @@ const SettingScreen = () => {
 
       {/* Logout Button */}
       <TouchableOpacity style={styles.button} onPress={handleLogout}>
-        <Text style={styles.buttonText}>ĐĂNG XUẤT</Text>
+        <Text style={{fontSize : 16 , marginTop : 10 , marginStart : 10}}>Đăng xuất</Text>
       </TouchableOpacity>
     </View>
   );
